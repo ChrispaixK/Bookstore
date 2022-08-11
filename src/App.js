@@ -1,4 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
+import Books from './components/Books';
+import Categories from './components/Categories';
 import './App.css';
 
 function App() {
@@ -11,7 +13,6 @@ function App() {
           <Link to="/Categories">Categories</Link>
         </nav>
       </div>
-
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="Categories" element={<Categories />} />
@@ -20,28 +21,6 @@ function App() {
         <p>&copy; Bookstore 2022</p>
       </div>
     </div>
-  );
-}
-
-function Books() {
-  return (
-    <>
-      <main className="books-container">
-        <h2>Books page here</h2>
-      </main>
-    </>
-  );
-}
-
-function Categories() {
-  return (
-    <>
-      <main>
-        <div className="categories-container">
-          <h2>Categories page here</h2>
-        </div>
-      </main>
-    </>
   );
 }
 
