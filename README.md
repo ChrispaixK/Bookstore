@@ -5,7 +5,7 @@
 ## Built With
 
 - REACT
-- REDUX
+- Redux
 
 ## Getting Started
 
