@@ -1,24 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { rmBook } from '../redux/books/books';
 
 const Book = (props) => {
-  const { title = 'Default title', author = 'Chrispaix' } = props;
+  const dispatch = useDispatch();
+
+  const { id, title, author } = props;
+
+  const rmBookHandler = () => {
+    dispatch(rmBook(id));
+  };
 
   return (
     <>
       <p>
         {title}
-        {' '}
-        by
-        {' '}
+        {' by '}
         {author}
       </p>
-      <button type="button">Delete</button>
+      <button type="button" onClick={rmBookHandler}>Delete</button>
     </>
   );
 };
 
 Book.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

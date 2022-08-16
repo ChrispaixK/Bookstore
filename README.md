@@ -5,6 +5,7 @@
 ## Built With
 
 - REACT
+- REDUX
 
 ## Getting Started
 
