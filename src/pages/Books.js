@@ -10,7 +10,13 @@ const Books = () => {
         <h2>Book Page</h2>
         <h3>List Of books below</h3>
         {actualBooks.map((book) => (
-          <Book key={book.id} id={book.id} title={book.title} author={book.author} />
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
         ))}
         <AddBook />
       </main>

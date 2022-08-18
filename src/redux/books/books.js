@@ -1,7 +1,12 @@
 const ADDBOOK = 'bookstore/books/ADDBOOK';
 const REMOVEBOOK = 'bookstore/books/REMOVEBOOK';
 // initial state
-const initState = [];
+const initState = [{
+  id: '1452',
+  title: 'Hello World',
+  author: 'Chrispaix Kaze',
+  category: 'Programming',
+}];
 
 export default function bookReducer(state = initState, action) {
   switch (action.type) {

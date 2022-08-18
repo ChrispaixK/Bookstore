@@ -9,6 +9,7 @@ const AddBook = () => {
   const [values, setValues] = useState({
     title: '',
     author: '',
+    category: '',
   });
   const valueChangeHandler = (v) => {
     v.preventDefault();
@@ -26,6 +27,7 @@ const AddBook = () => {
       id: uuidv4(),
       title: values.title,
       author: values.author,
+      category: values.category,
     };
 
     dispatch(addBook(newBook));
@@ -33,6 +35,7 @@ const AddBook = () => {
     setValues({
       title: '',
       author: '',
+      category: '',
     });
   };
 
@@ -51,6 +54,13 @@ const AddBook = () => {
           type="text"
           placeholder="Which Author?"
           value={values.author}
+          onChange={valueChangeHandler}
+        />
+        <input
+          name="category"
+          type="text"
+          placeholder="Which Category?"
+          value={values.category}
           onChange={valueChangeHandler}
         />
         <button type="submit">Add Book</button>
