@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+// import axios from 'axios';
+// import { addBook } from '../redux/books/books';
 import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
@@ -9,30 +11,34 @@ const AddBook = () => {
   const [values, setValues] = useState({
     title: '',
     author: '',
+    category: '',
   });
   const valueChangeHandler = (v) => {
     v.preventDefault();
     setValues({ ...values, [v.target.name]: v.target.value });
   };
 
-  const addBookHandler = (b) => {
+  const addBookHandler = async (b) => {
     b.preventDefault();
     if (!values.title.trim()) {
       alert('Incorect input');
       return;
     }
 
-    const newBook = {
-      id: uuidv4(),
+    const book = {
+      item_id: uuidv4(),
       title: values.title,
       author: values.author,
+      category: values.category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBook(book));
+    // dispatch(addBook(newBook.config.data));
     // reinitialize the values
     setValues({
       title: '',
       author: '',
+      category: '',
     });
   };
 
@@ -51,6 +57,13 @@ const AddBook = () => {
           type="text"
           placeholder="Which Author?"
           value={values.author}
+          onChange={valueChangeHandler}
+        />
+        <input
+          name="category"
+          type="text"
+          placeholder="Which Category?"
+          value={values.category}
           onChange={valueChangeHandler}
         />
         <button type="submit">Add Book</button>
