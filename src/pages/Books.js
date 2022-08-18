@@ -1,9 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import AddBook from '../components/Addbook';
 import Book from '../components/Book';
+import { fetchBooks } from '../redux/books/books';
 
 const Books = () => {
-  const actualBooks = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  const actualBooks = useSelector((state) => state.books.books);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+
   return (
     <>
       <main className="books-container">
@@ -11,8 +19,8 @@ const Books = () => {
         <h3>List Of books below</h3>
         {actualBooks.map((book) => (
           <Book
-            key={book.id}
-            id={book.id}
+            key={book.item_id}
+            id={book.item_id}
             title={book.title}
             author={book.author}
             category={book.category}
