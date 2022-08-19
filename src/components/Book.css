@@ -23,7 +23,7 @@
 }
 
 .author {
-  color: #00f;
+  color: #0290ff;
   font-size: 14px;
   text-transform: capitalize;
   text-align: start;
@@ -44,9 +44,9 @@
   font-weight: 100;
   border: none;
   background-color: transparent;
-  color: blue;
+  color: #0290ff;
   padding: 0 20px;
-  border-right: 1px solid blue;
+  border-right: 1px solid #0290ff;
   letter-spacing: 0.5px;
 }
 
@@ -114,7 +114,7 @@
 
 .circle .bar .progress,
 span {
-  background: #4158d0;
+  background: #0290ff;
 }
 
 .circle .left .progress {
@@ -178,7 +178,7 @@ span {
 }
 
 .update button {
-  background-color: blue;
+  background-color: #0290ff;
   padding: 8px 20px;
   border: none;
   color: #fff;
