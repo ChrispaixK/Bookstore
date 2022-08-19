@@ -33,4 +33,13 @@ body {
   height: 50px;
   color: #00f;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 8px 0.1px rgba(0, 0, 0, 0.212);
+}
+
+.fa-user {
+  color: #00f;
+  font-size: 20px;
 }

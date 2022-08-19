@@ -43,12 +43,12 @@ const Book = (props) => {
           </div>
         </div>
         <div className="otherstats">
-          <p>64%</p>
+          <p>78%</p>
           <p>Completed</p>
         </div>
       </div>
       <div className="update">
-        <p>current chapiter</p>
+        <p>current chapter</p>
         <p>chapiter 17</p>
         <button type="button">Update progress</button>
       </div>

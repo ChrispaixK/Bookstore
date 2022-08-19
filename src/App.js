@@ -16,7 +16,7 @@ function App() {
         </div>
 
         <div className="avatar">
-          <h4>ck</h4>
+          <i className="fa-solid fa-user" />
         </div>
       </div>
       <Routes>
