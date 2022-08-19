@@ -15,8 +15,6 @@ const Books = () => {
   return (
     <>
       <main className="books-container">
-        <h2>Book Page</h2>
-        <h3>List Of books below</h3>
         {actualBooks.map((book) => (
           <Book
             key={book.item_id}

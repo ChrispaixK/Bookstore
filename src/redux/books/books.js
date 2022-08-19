@@ -6,7 +6,9 @@ const ADDBOOK = 'bookstore/books/ADDBOOK';
 const REMOVEBOOK = 'bookstore/books/REMOVEBOOK';
 const FETCHBOOKS = 'bookstore/books/FETCHBOOKS';
 // initial state
-const initState = { books: [] };
+const initState = {
+  books: [],
+};
 
 export default function bookReducer(state = initState, action) {
   switch (action.type) {

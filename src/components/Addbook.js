@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-// import axios from 'axios';
-// import { addBook } from '../redux/books/books';
 import { addBook } from '../redux/books/books';
+import './Addbook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -43,29 +42,39 @@ const AddBook = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
+      <h3>add New BoOk</h3>
       <form onSubmit={addBookHandler}>
         <input
+          className="form-title"
           name="title"
           type="text"
-          placeholder="Add title"
+          placeholder="Book title"
           value={values.title}
           onChange={valueChangeHandler}
         />
         <input
+          className="form-author"
           name="author"
           type="text"
           placeholder="Which Author?"
           value={values.author}
           onChange={valueChangeHandler}
         />
-        <input
+        <select
+          className="form-category"
           name="category"
           type="text"
           placeholder="Which Category?"
           value={values.category}
           onChange={valueChangeHandler}
-        />
+        >
+          <option value="action">action</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Tech">Tech</option>
+          <option value="Education">Education</option>
+          <option value="magazine">magazine</option>
+        </select>
         <button type="submit">Add Book</button>
       </form>
     </div>

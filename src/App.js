@@ -7,19 +7,22 @@ function App() {
   return (
     <div>
       <div className="top-bar">
-        <h1>Bookstore</h1>
-        <nav className="links">
-          <Link to="/">Books</Link>
-          <Link to="/Categories">Categories</Link>
-        </nav>
+        <div className="top-left">
+          <h1>Bookstore CMS</h1>
+          <nav className="links">
+            <Link to="/">BOOKS</Link>
+            <Link to="/Categories">CATEGORIES</Link>
+          </nav>
+        </div>
+
+        <div className="avatar">
+          <i className="fa-solid fa-user" />
+        </div>
       </div>
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="Categories" element={<Categories />} />
       </Routes>
-      <div className="footer">
-        <p>&copy; Bookstore 2022</p>
-      </div>
     </div>
   );
 }
