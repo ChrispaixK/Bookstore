@@ -6,7 +6,11 @@ const ADDBOOK = 'bookstore/books/ADDBOOK';
 const REMOVEBOOK = 'bookstore/books/REMOVEBOOK';
 const FETCHBOOKS = 'bookstore/books/FETCHBOOKS';
 // initial state
-const initState = { books: [] };
+const initState = {
+  books: [{
+    item_id: 'sdgfasdg', title: 'testing', author: 'draft', category: 'magic',
+  }],
+};
 
 export default function bookReducer(state = initState, action) {
   switch (action.type) {

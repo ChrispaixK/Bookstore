@@ -30,14 +30,17 @@ const Book = (props) => {
         </div>
       </div>
       <div className="stats">
-
-        <div className="progress">
-          <svg className="svg1" height="100" width="100">
-            <circle cx="40" cy="20" r="10" stroke="#FF0080" strokeWidth="20" fill="transparent" />
-          </svg>
-          <svg className="svg2" height="50" width="50">
-            <circle cx="10" cy="30" r="10" stroke="#FF0080" strokeWidth="20" fill="transparent" />
-          </svg>
+        <div className="circular">
+          <div className="inner" />
+          <div className="outer" />
+          <div className="circle">
+            <div className="bar left">
+              <div className="progress" />
+            </div>
+            <div className="bar right">
+              <div className="progress" />
+            </div>
+          </div>
         </div>
         <div className="otherstats">
           <p>64%</p>
