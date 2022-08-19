@@ -43,7 +43,7 @@ const Book = (props) => {
           </div>
         </div>
         <div className="otherstats">
-          <p>78%</p>
+          <p>{`${Math.trunc(Math.random() * 100)}%`}</p>
           <p>Completed</p>
         </div>
       </div>

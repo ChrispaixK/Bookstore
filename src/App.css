@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
 }
 
 .top-bar {
@@ -9,7 +9,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  box-shadow: 0 0.5px 10px 0 rgba(0, 0, 0, 0.11);
   background-color: #fff;
 }
 
