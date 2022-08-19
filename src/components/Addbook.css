@@ -27,7 +27,7 @@
   width: 35%;
   padding: 10px 0;
   margin-right: 20px;
-  border: 1px solid rgba(128, 128, 128, 0.295);
+  border: 1px solid  rgba(128, 128, 128, 0.747);
   border-radius: 5px;
   font-size: 18px;
 }
@@ -36,7 +36,7 @@
   width: 30%;
   padding: 10px 0;
   margin-right: 20px;
-  border: 1px solid rgba(128, 128, 128, 0.295);
+  border: 1px solid rgba(128, 128, 128, 0.747);
   border-radius: 5px;
   font-size: 18px;
 }
